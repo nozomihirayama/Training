@@ -63,3 +63,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap'
+
+gem 'enum_help', '~> 0.0.17'

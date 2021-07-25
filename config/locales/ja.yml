@@ -1,3 +1,7 @@
---2021-06-18 22:25:05--  https://githubusercontent.com/svenfuchs/rails-i18n/master/rails/locale/ja.yml
-githubusercontent.com (githubusercontent.com) をDNSに問いあわせています... 失敗しました: ホスト名にアドレスが割り当てられていません.
-wget: ホストアドレス `githubusercontent.com' を解決できませんでした。
+ja:
+  enums:
+    task:
+      status:
+        not_started: 未着手
+        on_going: 作業中
+        completed: 完了
