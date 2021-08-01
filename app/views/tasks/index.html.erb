@@ -1,8 +1,20 @@
 <%= link_to "新しいタスクを登録する", new_task_path, class: 'btn btn-info' %>
-<%= @tasks.each do |task| %>
-  <p><%= link_to task.id, task %></p>
-  <p>タスク名: <%= task.name %></p>
-  <p>内容: <%= task.content %></p>
-  <p>ステータス: <%= task.status_i18n %></p>
-  <p>〆切: <%= task.deadline.strftime("%m月%d日") %></p>
+
+<table class="table">
+<thead>
+  <th scope="col">タスクID</th>
+  <th scope="col">タスク名</th>
+  <th scope="col">内容</th>
+  <th scope="col">ステータス</th>
+  <th scope="col">〆切</th>
+</thead>
+<% @tasks.each do |task| %>
+<tbody>
+  <td><%= link_to task.id, task %></td>
+  <td><%= task.name %></td>
+  <td><%= task.content %></td>
+  <td><%= task.status_i18n %></td>
+  <td><%= task.deadline.strftime("%m月%d日") %></td>
+</tbody>
 <% end %>
+</table>
