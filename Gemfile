@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.11', '>= 2.11.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -69,3 +69,10 @@ gem 'bootstrap'
 gem 'enum_help', '~> 0.0.17'
 
 gem 'pry-rails', '~> 0.3.9'
+
+gem 'omniauth-google-oauth2'
+
+gem 'omniauth-rails_csrf_protection'
+
+gem 'jquery-rails'
+

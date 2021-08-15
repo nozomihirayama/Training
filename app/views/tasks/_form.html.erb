@@ -1,24 +1,25 @@
-<%= form_with model: task, local: true do |f| %>
+<%= form_with model: task do |f| %>
   <div class="form-control">
       <%= f.label :name, "タスク名" %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, id: "name" %>
   </div>
 
   <div class="form-control">
     <%= f.label :content, "内容" %>
-    <%= f.text_field :content %>
+    <%= f.text_field :content, id: "content" %>
   </div>
 
   <div class="form-control">
     <%= f.label :status, "ステータス" %>
-    <%= f.select(:status, Task.statuses.keys.map {|k| [Task.statuses_i18n[k], k]}) %>
+    <%= f.select(:status, Task.statuses.keys.map {|k| [Task.statuses_i18n[k], k]}, id: "status") %>
   </div>
 
   <div class="form-control">
     <%= f.label :deadline, "〆切" %>
-    <%= f.date_field :deadline, value: Date.current %>
+    <%= f.date_field :deadline, value: Date.current, id: "deadline" %>
   </div>
 
   <%= f.submit "追加・更新" %>
+
 <% end %>
 <%= link_to "タスク一覧へ", tasks_path %>
